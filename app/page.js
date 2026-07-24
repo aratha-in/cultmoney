@@ -1,0 +1,566 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { 
+  ArrowRight, Shield, Award, Users, TrendingUp, DollarSign, 
+  BarChart2, Landmark, CheckCircle, ChevronDown, Play, Star
+} from 'lucide-react';
+
+// Custom CountUp Animation
+function Counter({ value, suffix = '', duration = 2000 }) {
+  const [count, setCount] = useState(0);
+  
+  useEffect(() => {
+    let start = 0;
+    const end = parseInt(value);
+    if (start === end) return;
+    
+    let totalMiliseconds = duration;
+    let incrementTime = Math.abs(Math.floor(totalMiliseconds / end));
+    
+    let timer = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start === end) clearInterval(timer);
+    }, incrementTime);
+    
+    return () => clearInterval(timer);
+  }, [value, duration]);
+  
+  return <span>{count}{suffix}</span>;
+}
+
+export default function Home() {
+  const [activeFaq, setActiveFaq] = useState(null);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 25 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: 'spring', stiffness: 90, damping: 14 }
+    }
+  };
+
+  const offerServices = [
+    {
+      title: 'Shares',
+      desc: 'We provide expert guidance and support for your stock market investments. Our team helps you understand market trends and make informed investment decisions.',
+      icon: <TrendingUp className="w-7 h-7 text-primary" />
+    },
+    {
+      title: 'Mutual Funds',
+      desc: 'Mutual funds are professionally managed investment portfolios designed to achieve financial goals. We offer a wide range of mutual fund investment solutions.',
+      icon: <DollarSign className="w-7 h-7 text-primary" />
+    },
+    {
+      title: 'Insurance',
+      desc: 'Insurance is a financial product that provides protection against financial losses. We help you choose suitable insurance plans for health, life, and business protection.',
+      icon: <Shield className="w-7 h-7 text-primary" />
+    }
+  ];
+
+  const whyChooseUsFeatures = [
+    {
+      title: 'Shares',
+      desc: 'Professional investment guidance and market analysis to help you make informed trading decisions.',
+      icon: <TrendingUp className="w-5 h-5 text-primary" />
+    },
+    {
+      title: 'Mutual Funds',
+      desc: 'Diversified mutual fund investment options designed for long-term wealth creation.',
+      icon: <DollarSign className="w-5 h-5 text-primary" />
+    },
+    {
+      title: 'Insurance',
+      desc: 'Comprehensive insurance solutions tailored to your personal and business requirements.',
+      icon: <Shield className="w-5 h-5 text-primary" />
+    },
+    {
+      title: 'FD And Bonds',
+      desc: 'Secure investment opportunities with fixed returns and stable financial growth.',
+      icon: <Award className="w-5 h-5 text-primary" />
+    },
+    {
+      title: 'PMS And AIF',
+      desc: 'Portfolio management services and alternative investment funds for premium wealth management.',
+      icon: <BarChart2 className="w-5 h-5 text-primary" />
+    },
+    {
+      title: 'Taxation',
+      desc: 'Professional tax planning and compliance solutions for individuals and businesses.',
+      icon: <Landmark className="w-5 h-5 text-primary" />
+    }
+  ];
+
+  const testimonials = [
+    {
+      text: '“CultMoney Financial Services has completely transformed my investment planning journey. Their professional guidance and support helped me make confident financial decisions.”',
+      author: 'Aravind K.',
+      desc: 'Independent Investor'
+    },
+    {
+      text: '“The team at CultMoney Financial Services provides excellent financial advice and investment strategies. Their service quality and client support are outstanding.”',
+      author: 'Rajesh Kumar',
+      desc: 'Business Director'
+    },
+    {
+      text: '“My investment experience has been smooth and rewarding because of CultMoney Financial Services. Their experts helped me achieve better returns.”',
+      author: 'Srinivas Murthy',
+      desc: 'HNI Client'
+    },
+    {
+      text: '“Thanks to CultMoney Financial Services for their professional support and investment solutions. Their team truly understands client financial goals.”',
+      author: 'Nisha Sharma',
+      desc: 'Corporate Executive'
+    },
+    {
+      text: '“CultMoney Financial Services has been a great partner for financial planning. Their trusted support and personalized solutions helped me significantly.”',
+      author: 'Priya Reddy',
+      desc: 'Consulting Professional'
+    }
+  ];
+
+  return (
+    <div className="relative pt-24 overflow-x-hidden bg-white text-slate-900">
+      
+      {/* Background soft styling decoration */}
+      <div className="absolute inset-0 bg-hero-gradient opacity-90 z-0"></div>
+
+      {/* 1. Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center py-16 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Content */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-span-6 space-y-8"
+            >
+              <div className="inline-flex items-center space-x-2 bg-slate-50 border border-slate-200/60 px-4 py-2 rounded-full">
+                <Shield className="w-4 h-4 text-primary" />
+                <span className="text-xs font-semibold uppercase tracking-wider text-slate-600">
+                  AMFI Registered Mutual Fund Distributor
+                </span>
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold font-display tracking-tight text-slate-950 leading-tight">
+                We Build your Strong <br />
+                <span className="text-gradient">Financial Success</span>
+              </h1>
+
+              <p className="text-base md:text-lg text-slate-500 max-w-2xl leading-relaxed">
+                CultMoney Financial Services is a committed to providing comprehensive financial solutions that are tailored to meet your unique needs and goals. Whether you&apos;re an individual, family, or business, our experienced team is here to guide you through the complexities of financial planning, taxation, investment management, and more.
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Link 
+                  href="/services/financial-services"
+                  className="flex items-center space-x-2 bg-brand-gradient text-white font-semibold px-8 py-4 rounded-full shadow-glow-green hover:brightness-110 active:scale-95 transition-all duration-300"
+                >
+                  <span>Explore Our Services</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link 
+                  href="/about"
+                  className="bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 font-semibold px-8 py-4 rounded-full transition-all duration-300"
+                >
+                  Discover More
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Right Media Graphic */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="lg:col-span-6 relative"
+            >
+              <div className="glass-panel p-3 rounded-4xl bg-white/80 overflow-hidden shadow-premium">
+                <div className="relative h-[320px] md:h-[400px] w-full rounded-3xl overflow-hidden">
+                  <Image 
+                    src="/images/hero_finance_luxury.png"
+                    alt="CultMoney Luxury Wealth Management Office"
+                    fill
+                    sizes="(max-w-768px) 100vw, 50vw"
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                  
+                  {/* Overlay badge */}
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur border border-slate-200/50 p-4 rounded-2xl flex items-center justify-between shadow-lg">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 rounded-xl bg-brand-gradient flex items-center justify-center">
+                        <Award className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <span className="text-[10px] text-slate-400 block font-semibold">AMFI License</span>
+                        <span className="text-xs font-bold text-slate-800">ARN-276771 Verified</span>
+                      </div>
+                    </div>
+                    <span className="text-[10px] bg-primary/10 text-primary font-bold px-2.5 py-1 rounded-full">
+                      100% Certified
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 2. SIP Section */}
+      <section className="py-24 relative z-10 bg-slate-50 border-y border-slate-200/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Image */}
+            <div className="lg:col-span-6">
+              <div className="glass-panel p-3 rounded-4xl bg-white shadow-sm">
+                <div className="relative h-[280px] md:h-[350px] w-full rounded-3xl overflow-hidden">
+                  <Image 
+                    src="/images/sip_savings.png"
+                    alt="SIP Planner and Savings Concept"
+                    fill
+                    sizes="(max-w-768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content */}
+            <div className="lg:col-span-6 space-y-6">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">Compounding Calculator</span>
+              <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-950">
+                SIP Planner
+              </h2>
+              <div className="inline-block bg-primary/10 text-primary font-bold text-xs px-3 py-1 rounded-full">
+                Daily SIP
+              </div>
+              <p className="text-slate-500 text-sm leading-relaxed">
+                Take charge of your long-term dreams by estimating systematic gains. Start small, accumulate steadily, and leverage compounding dynamics to secure a strong financial cushion.
+              </p>
+              <div className="pt-2">
+                <Link
+                  href="/services/mutual-fund-calculator"
+                  className="inline-flex items-center space-x-2 bg-brand-gradient text-white font-semibold px-8 py-4 rounded-full shadow-glow-green hover:brightness-110 transition-all duration-300"
+                >
+                  <span>Calculate Now</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 3. What We Offer Section */}
+      <section className="py-24 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">Service Packages</span>
+            <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-950">
+              What We Offer:
+            </h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-base">
+              At CultMoney Financial Services, we offer a comprehensive suite of financial services designed to help you achieve your financial goals and secure your financial future.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {offerServices.map((offer, idx) => (
+              <div 
+                key={idx}
+                className="glass-panel p-8 rounded-3xl flex flex-col justify-between hover:scale-[1.02] bg-white"
+              >
+                <div className="space-y-6">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center shadow-sm">
+                    {offer.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-800 font-display">{offer.title}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">{offer.desc}</p>
+                </div>
+                <div className="pt-8">
+                  <Link
+                    href="/services/financial-services"
+                    className="inline-flex items-center space-x-2 text-xs font-bold text-primary hover:text-slate-900 transition-colors"
+                  >
+                    <span>Learn more</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4. Why Choose Us Section */}
+      <section className="py-24 relative z-10 bg-slate-50 border-y border-slate-200/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">Key Advantages</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-950">Why Choose Us</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseUsFeatures.map((feat, idx) => (
+              <div 
+                key={idx}
+                className="glass-panel p-6 rounded-3xl bg-white flex space-x-4 items-start"
+              >
+                <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0">
+                  {feat.icon}
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-base font-bold text-slate-800 font-display">{feat.title}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">{feat.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. Financial Freedom Section (Interactive Presentation Frame) */}
+      <section className="py-24 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">Your Destination</span>
+            <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 mt-2">
+              Financial Freedom
+            </h2>
+          </div>
+
+          {/* Luxury Video Overlay Mockup */}
+          <div className="max-w-5xl mx-auto">
+            <div className="glass-panel p-4 rounded-4xl bg-white shadow-premium relative">
+              <div className="relative h-[320px] md:h-[480px] w-full rounded-3xl overflow-hidden bg-slate-950">
+                <Image 
+                  src="/images/financial_freedom.png"
+                  alt="Financial Freedom Lifestyle"
+                  fill
+                  sizes="(max-w-1024px) 100vw, 80vw"
+                  className="object-cover opacity-80"
+                />
+                
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/20 hover:bg-slate-950/30 transition-all duration-300">
+                  <div className="w-20 h-20 rounded-full bg-white text-primary flex items-center justify-center shadow-2xl cursor-pointer hover:scale-110 active:scale-95 transition-transform duration-300">
+                    <Play className="w-8 h-8 fill-primary translate-x-0.5" />
+                  </div>
+                  <span className="text-white text-xs font-semibold uppercase tracking-widest mt-4">
+                    Watch Introduction Video
+                  </span>
+                </div>
+
+                {/* Progress bar timeline */}
+                <div className="absolute bottom-6 left-6 right-6 flex items-center space-x-3 text-white text-[10px] font-mono">
+                  <span>0:00</span>
+                  <div className="flex-grow h-1.5 bg-white/20 rounded-full overflow-hidden">
+                    <div className="h-full bg-primary rounded-full" style={{ width: '35%' }}></div>
+                  </div>
+                  <span>4:15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 6. Founder Section */}
+      <section className="py-24 bg-white border-y border-slate-200/50 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left portrait */}
+            <div className="lg:col-span-5">
+              <div className="glass-panel p-3 rounded-4xl bg-white shadow-sm">
+                <div className="relative h-[350px] md:h-[450px] w-full rounded-3xl overflow-hidden">
+                  <Image 
+                    src="/images/founder_portrait.png"
+                    alt="CultMoney Managing Director"
+                    fill
+                    sizes="(max-w-768px) 100vw, 40vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right letter */}
+            <div className="lg:col-span-7 space-y-6">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">Leadership Message</span>
+              <h2 className="text-3xl font-bold font-display text-slate-900">Personalized Financial Stewardship</h2>
+              <div className="h-1 w-20 bg-brand-gradient rounded-full"></div>
+              
+              <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
+                <p>
+                  At CultMoney Financial Services, we are committed to helping our clients achieve their financial goals through personalized financial planning, investment management, and expert advisory services.
+                </p>
+                <p>
+                  Our experienced team is dedicated to providing trusted financial solutions and long-term wealth creation strategies for individuals and businesses.
+                </p>
+                <p>
+                  Let us be your trusted partner on the path to financial freedom.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-slate-200">
+                <span className="font-bold text-slate-800 block text-base font-display">Managing Director</span>
+                <span className="text-xs text-primary font-semibold uppercase tracking-wider">CultMoney Financial Services</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Company Mission Section */}
+      <section className="py-24 relative z-10 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary">Our Core Mission</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 leading-tight">
+            We bring innovation and creative Financial freedom to the CultMoney Financial Services
+          </h2>
+          <p className="text-slate-500 max-w-3xl mx-auto text-base leading-relaxed">
+            Performance-driven financial solutions and personalized services designed to empower individuals and businesses in achieving long-term financial growth and success.
+          </p>
+        </div>
+      </section>
+
+      {/* 8. Stats Section */}
+      <section className="py-16 bg-white border-y border-slate-200/50 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-1">
+              <p className="text-4xl md:text-5xl font-extrabold text-slate-950 font-display">
+                <Counter value="20" suffix=" Years" />
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Industry Experience
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-4xl md:text-5xl font-extrabold text-slate-950 font-display">
+                <Counter value="200" suffix=" +" />
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Happy Customers
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-4xl md:text-5xl font-extrabold text-slate-950 font-display">
+                <Counter value="10" suffix=" cr" />
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Managing AUM
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-4xl md:text-5xl font-extrabold text-slate-950 font-display">
+                <Counter value="25" />
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Business Partners
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Testimonials Section */}
+      <section className="py-24 bg-white relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">Testimonials</span>
+            <div className="flex items-center justify-center space-x-1.5">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+              ))}
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-slate-900">
+              Excellent 4.8 of 5 stars rating
+            </h2>
+            <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold">
+              Based on client reviews
+            </p>
+          </div>
+
+          <div className="flex overflow-x-auto gap-8 pb-8 no-scrollbar snap-x snap-mandatory scroll-smooth -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+            {testimonials.map((test, idx) => (
+              <div 
+                key={idx}
+                className="glass-panel p-8 rounded-3xl bg-slate-50 flex flex-col justify-between min-w-[300px] md:min-w-[400px] max-w-[450px] shrink-0 snap-start snap-always"
+              >
+                <p className="text-sm text-slate-600 italic leading-relaxed mb-6">
+                  {test.text}
+                </p>
+                <div>
+                  <span className="font-bold text-slate-800 block">{test.author}</span>
+                  <span className="text-xs text-slate-400">{test.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 10. Call to Action */}
+      <section className="py-24 relative overflow-hidden z-10 bg-white border-t border-slate-200/50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 bg-white border border-slate-200/60 p-12 rounded-4xl shadow-sm">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary">Connect With Us</span>
+          <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 max-w-2xl mx-auto">
+            Ready to Begin Your Wealth Creation Journey?
+          </h2>
+          <p className="text-slate-500 max-w-xl mx-auto text-sm leading-relaxed">
+            Get connected with certified investment specialists to craft or review your existing asset structure. Book your premium advisory session today.
+          </p>
+          <div className="flex justify-center space-x-4 pt-4">
+            <Link 
+              href="/contact"
+              className="bg-brand-gradient text-white font-bold px-8 py-4 rounded-full shadow-glow-green hover:brightness-110 active:scale-95 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Schedule Advisor Call</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a 
+              href="https://wa.me/919160110888" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] text-white font-bold px-8 py-4 rounded-full hover:brightness-110 transition-all duration-300 shadow-sm"
+            >
+              WhatsApp Advisor
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}

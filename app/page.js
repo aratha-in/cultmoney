@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Shield, Award, Users, TrendingUp, DollarSign, 
   BarChart2, Landmark, CheckCircle, ChevronDown, Play, Star
@@ -35,6 +35,91 @@ function Counter({ value, suffix = '', duration = 2000 }) {
 
 export default function Home() {
   const [activeFaq, setActiveFaq] = useState(null);
+
+  const faqs = [
+    {
+      q: "What is CultMoney and who owns it?",
+      a: "CultMoney is a premium wealth management and financial advisory brand operated by Sahiani Finvest Pvt Ltd. The firm was founded by Mahesh Mittapalli, dedicated to bringing structured, transparent, and high-impact wealth advisory lifecycles to clients."
+    },
+    {
+      q: "Is CultMoney registered with AMFI?",
+      a: "Yes, Sahiani Finvest Pvt Ltd (operating under the brand name CultMoney) is an AMFI registered Mutual Fund Distributor with ARN code ARN-276771. Registration Date: 13/09/2023 | Validity: 31/10/2028."
+    },
+    {
+      q: "What advisory and investment services do you offer?",
+      a: "We provide comprehensive wealth advisory desks including custom asset allocation, mutual fund distribution, portfolio restructuring, Systematic Investment Plans (SIP), Systematic Withdrawal Plans (SWP), tax optimization, and bespoke high-net-worth (HNW) financial planning."
+    },
+    {
+      q: "Where is CultMoney located and how can I contact the desks?",
+      a: "Our corporate advisory desk is located at D No 3-4-126, 1st Floor, Mallapur, Nacharam – Habsiguda Road, Hyderabad - 500076. You can call our advisory desk at +91 9160110888 or email us directly at info@cultmoney.com."
+    },
+    {
+      q: "How does CultMoney approach portfolio transparency?",
+      a: "We believe in client-first transparency. All commission disclosures, asset allocation models, performance statements, and advisory lifecycle milestones are documented and shared live via our secure Client Portfolio Portal."
+    }
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.cultmoney.in/#organization",
+        "name": "CultMoney",
+        "legalName": "Sahiani Finvest Pvt Ltd",
+        "url": "https://www.cultmoney.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.cultmoney.in/CultMoneyicon.svg"
+        },
+        "sameAs": [
+          "https://www.facebook.com/cultmoney",
+          "https://www.linkedin.com/company/cultmoney"
+        ]
+      },
+      {
+        "@type": "FinancialService",
+        "@id": "https://www.cultmoney.in/#service",
+        "name": "CultMoney - Premium Wealth Management",
+        "url": "https://www.cultmoney.in",
+        "logo": "https://www.cultmoney.in/CultMoneyicon.svg",
+        "telephone": "+91 9160110888",
+        "email": "info@cultmoney.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "D No 3-4-126, 1st Floor, Mallapur, Nacharam – Habsiguda Road",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "postalCode": "500076",
+          "addressCountry": "IN"
+        },
+        "priceRange": "$$$",
+        "parentOrganization": {
+          "@id": "https://www.cultmoney.in/#organization"
+        },
+        "knowsAbout": [
+          "Wealth Management",
+          "Mutual Funds Distribution",
+          "Financial Advisory",
+          "Systematic Withdrawal Plan (SWP)",
+          "SIP Planning",
+          "Portfolio Management Services"
+        ],
+        "areaServed": "IN"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      }
+    ]
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -134,6 +219,10 @@ export default function Home() {
 
   return (
     <div className="relative pt-24 overflow-x-hidden bg-white text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       
       {/* Background soft styling decoration */}
       <div className="absolute inset-0 bg-hero-gradient opacity-90 z-0"></div>
@@ -163,7 +252,7 @@ export default function Home() {
               </h1>
 
               <p className="text-base md:text-lg text-slate-500 max-w-2xl leading-relaxed">
-                CultMoney Financial Services is a committed to providing comprehensive financial solutions that are tailored to meet your unique needs and goals. Whether you&apos;re an individual, family, or business, our experienced team is here to guide you through the complexities of financial planning, taxation, investment management, and more.
+                CultMoney Financial Services is committed to providing comprehensive financial solutions that are tailored to meet your unique needs and goals. Whether you&apos;re an individual, family, or business, our experienced team is here to guide you through the complexities of financial planning, taxation, investment management, and more.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-2">
@@ -549,6 +638,55 @@ export default function Home() {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* 9.5 FAQ Section for SEO / AEO / GEO */}
+      <section className="py-24 bg-slate-50 border-y border-slate-200/50 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Frequently Asked Questions</span>
+            <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900">
+              Wealth Advisory FAQ
+            </h2>
+            <p className="text-slate-500 text-sm leading-relaxed">
+              Clear, transparent answers to common questions about our wealth advisory and financial services.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => {
+              const isOpen = activeFaq === idx;
+              return (
+                <div 
+                  key={idx} 
+                  className="glass-panel rounded-2xl bg-white border border-slate-200/60 overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    onClick={() => setActiveFaq(isOpen ? null : idx)}
+                    className="w-full text-left px-6 py-5 flex items-center justify-between text-slate-900 font-semibold text-base focus:outline-none"
+                  >
+                    <span>{faq.q}</span>
+                    <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      >
+                        <div className="px-6 pb-6 text-sm text-slate-600 border-t border-slate-100 pt-4 leading-relaxed">
+                          {faq.a}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 

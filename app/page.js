@@ -289,12 +289,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content */}
-            <motion.div 
-              initial={{ x: -15 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="lg:col-span-6 space-y-8"
-            >
+            <div className="lg:col-span-6 space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold font-display tracking-tight text-slate-950 leading-tight">
                 Wealth Management <br />
                 <span className="text-gradient">For Your Financial Success</span>
@@ -320,15 +315,10 @@ export default function Home() {
                   Discover More
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Media Graphic */}
-            <motion.div 
-              initial={{ scale: 0.98 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="lg:col-span-6 relative"
-            >
+            <div className="lg:col-span-6 relative">
               <div className="glass-panel p-3 rounded-4xl bg-white/80 overflow-hidden shadow-premium">
                 <div className="relative h-[320px] md:h-[440px] lg:h-[460px] w-full rounded-3xl overflow-hidden">
                   <Image 
@@ -358,7 +348,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
           </div>
         </div>

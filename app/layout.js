@@ -15,7 +15,7 @@ const poppins = Poppins({
 export const metadata = {
   title: 'CultMoney - Premium Wealth Management',
   description: 'Cultmoney, operated by Sahiani Finvest Pvt Ltd, is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
-  keywords: 'Wealth Management, Investment Advisor, Mutual Funds, SIP, SWP, Portfolio Management, Cultmoney, Financial Planning, AMFI Registered Distributor, Sahiani Finvest',
+  keywords: 'Wealth Management, CultMoney, Investment Advisor, Best Wealth Management India, Top Financial Advisors Hyderabad, Mutual Funds Distributor, SIP Investment, SWP Planning, Portfolio Management Services, Financial Planning India, AMFI Registered Distributor, Sahiani Finvest, Wealth Advisors Hyderabad, Private Wealth Management, High Net Worth Individual (HNWI) Wealth Services, Bespoke Investment Advisory, Asset Allocation, Retirement Planning India, Tax Saving Investments',
   metadataBase: new URL('https://www.cultmoney.in'),
   alternates: {
     canonical: '/',

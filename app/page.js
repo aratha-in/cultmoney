@@ -304,10 +304,9 @@ export default function Home() {
                 <div className="pt-8">
                   <Link
                     href="/services/financial-services"
-                    aria-label={`Learn more about our ${offer.title} services`}
-                    className="inline-flex items-center space-x-2 text-xs font-bold text-primary hover:text-slate-900 transition-colors"
+                    className="inline-flex items-center space-x-2 text-xs font-bold text-[#2E7D32] hover:text-slate-900 transition-colors"
                   >
-                    <span>Learn more</span>
+                    <span>Learn more <span className="sr-only">about our {offer.title} services</span></span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

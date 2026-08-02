@@ -99,12 +99,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo / Brand Name */}
           <Link href="/" className="flex items-center group">
-            <div className="relative w-56 h-14 overflow-hidden group-hover:scale-105 transition-transform duration-300">
+            <div className="w-56 h-14 overflow-hidden group-hover:scale-105 transition-transform duration-300">
               <Image
                 src="/images/logo.png"
                 alt="CultMoney Logo"
-                fill
-                sizes="224px"
+                width={224}
+                height={56}
                 className="object-contain object-left"
                 priority
               />
@@ -218,6 +218,7 @@ export default function Navbar() {
           <div className="flex lg:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
               className="p-2.5 rounded-xl bg-slate-50 text-slate-600 hover:text-slate-900 focus:outline-none transition-colors border border-slate-200"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

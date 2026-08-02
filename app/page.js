@@ -176,6 +176,7 @@ export default function Home() {
                 </Link>
                 <Link 
                   href="/about"
+                  aria-label="Discover more about Cultmoney's financial services and background"
                   className="bg-slate-50 border border-slate-200 text-slate-700 hover:bg-slate-100 font-semibold px-8 py-4 rounded-full transition-all duration-300"
                 >
                   Discover More
@@ -213,7 +214,7 @@ export default function Home() {
                         <span className="text-xs font-bold text-slate-800">ARN-276771 Verified</span>
                       </div>
                     </div>
-                    <span className="text-[10px] bg-primary/10 text-primary font-bold px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] bg-[#2E7D32]/10 text-[#2E7D32] font-bold px-2.5 py-1 rounded-full">
                       100% Certified
                     </span>
                   </div>
@@ -247,11 +248,11 @@ export default function Home() {
 
             {/* Right Content */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-primary">Compounding Calculator</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Compounding Calculator</span>
               <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-950">
                 SIP Planner
               </h2>
-              <div className="inline-block bg-primary/10 text-primary font-bold text-xs px-3 py-1 rounded-full">
+              <div className="inline-block bg-[#2E7D32]/10 text-[#2E7D32] font-bold text-xs px-3 py-1 rounded-full">
                 Daily SIP
               </div>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -260,6 +261,7 @@ export default function Home() {
               <div className="pt-2">
                 <Link
                   href="/services/mutual-fund-calculator"
+                  aria-label="Calculate systematic investment returns now"
                   className="inline-flex items-center space-x-2 bg-brand-gradient text-white font-semibold px-8 py-4 rounded-full shadow-glow-green hover:brightness-110 transition-all duration-300"
                 >
                   <span>Calculate Now</span>
@@ -277,7 +279,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">Service Packages</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Service Packages</span>
             <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-950">
               What We Offer:
             </h2>
@@ -302,6 +304,7 @@ export default function Home() {
                 <div className="pt-8">
                   <Link
                     href="/services/financial-services"
+                    aria-label={`Learn more about our ${offer.title} services`}
                     className="inline-flex items-center space-x-2 text-xs font-bold text-primary hover:text-slate-900 transition-colors"
                   >
                     <span>Learn more</span>
@@ -320,7 +323,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">Key Advantages</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Key Advantages</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-950">Why Choose Us</h2>
           </div>
 
@@ -348,7 +351,7 @@ export default function Home() {
       <section className="py-24 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">Your Destination</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Your Destination</span>
             <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 mt-2">
               Financial Freedom
             </h2>
@@ -424,7 +427,7 @@ export default function Home() {
             {/* Right letter */}
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-primary">Founder & Leadership</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Founder & Leadership</span>
                 <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 leading-tight">Mahesh Mittapalli</h2>
                 <p className="text-sm md:text-base font-semibold text-secondary tracking-wide flex flex-wrap items-center gap-2">
                   <span>MBA, NISM, CWM</span>
@@ -461,7 +464,7 @@ export default function Home() {
       {/* 7. Company Mission Section */}
       <section className="py-24 relative z-10 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary">Our Core Mission</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Our Core Mission</span>
           <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 leading-tight">
             We bring innovation and creative Financial freedom to the CultMoney Financial Services
           </h2>
@@ -516,7 +519,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">Testimonials</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Testimonials</span>
             <div className="flex items-center justify-center space-x-1.5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
@@ -525,7 +528,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold font-display text-slate-900">
               Excellent 4.8 of 5 stars rating
             </h2>
-            <p className="text-slate-400 text-xs uppercase tracking-wider font-semibold">
+            <p className="text-slate-600 text-xs uppercase tracking-wider font-semibold">
               Based on client reviews
             </p>
           </div>
@@ -541,7 +544,7 @@ export default function Home() {
                 </p>
                 <div>
                   <span className="font-bold text-slate-800 block">{test.author}</span>
-                  <span className="text-xs text-slate-400">{test.desc}</span>
+                  <span className="text-xs text-slate-500">{test.desc}</span>
                 </div>
               </div>
             ))}
@@ -553,7 +556,7 @@ export default function Home() {
       {/* 10. Call to Action */}
       <section className="py-24 relative overflow-hidden z-10 bg-white border-t border-slate-200/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 bg-white border border-slate-200/60 p-12 rounded-4xl shadow-sm">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary">Connect With Us</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Connect With Us</span>
           <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 max-w-2xl mx-auto">
             Ready to Begin Your Wealth Creation Journey?
           </h2>
@@ -572,7 +575,8 @@ export default function Home() {
               href="https://wa.me/919160110888" 
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] text-white font-bold px-8 py-4 rounded-full hover:brightness-110 transition-all duration-300 shadow-sm"
+              aria-label="Chat with Cultmoney WhatsApp advisor"
+              className="bg-[#075E54] text-white font-bold px-8 py-4 rounded-full hover:brightness-110 transition-all duration-300 shadow-sm"
             >
               WhatsApp Advisor
             </a>

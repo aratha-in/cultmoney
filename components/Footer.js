@@ -12,12 +12,12 @@ export default function Footer() {
           {/* Column 1: About / Logo */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center group">
-              <div className="relative w-56 h-14 overflow-hidden rounded-lg flex-shrink-0">
+              <div className="w-56 h-14 overflow-hidden rounded-lg flex-shrink-0">
                 <Image
                   src="/images/Wlogo.png"
                   alt="CultMoney Logo"
-                  fill
-                  sizes="224px"
+                  width={224}
+                  height={56}
                   className="object-contain object-left"
                 />
               </div>
@@ -25,17 +25,17 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-slate-300">
               Cult Money — We Build your Strong Financial Success. Empowering wealth creation through expert guidance.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
+            <div className="flex space-x-3">
+              <a href="#" aria-label="Visit Cultmoney on Facebook" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
                 <Facebook className="w-4 h-4 text-slate-300 hover:text-white" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
+              <a href="#" aria-label="Visit Cultmoney on Twitter" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
                 <Twitter className="w-4 h-4 text-slate-300 hover:text-white" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
+              <a href="#" aria-label="Visit Cultmoney on Instagram" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
                 <Instagram className="w-4 h-4 text-slate-300 hover:text-white" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
+              <a href="#" aria-label="Visit Cultmoney on LinkedIn" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
                 <Linkedin className="w-4 h-4 text-slate-300 hover:text-white" />
               </a>
             </div>
@@ -126,10 +126,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Credits */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>© {new Date().getFullYear()} Sahiani Finvest Pvt Ltd. All Rights Reserved.</p>
           <p className="flex items-center space-x-1">
-            <span>Developed by <a href="https://aratha.in" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline font-semibold">Aratha</a></span>
+            <span>Developed by <a href="https://aratha.in" target="_blank" rel="noopener noreferrer" aria-label="Visit developer website Aratha" className="text-slate-300 hover:text-primary transition-colors underline font-semibold">Aratha</a></span>
           </p>
         </div>
       </div>

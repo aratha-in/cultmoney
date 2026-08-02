@@ -11,7 +11,8 @@ export default function WhatsAppButton() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center space-x-2 bg-[#25D366] text-white p-3.5 rounded-full shadow-premium hover:bg-[#20ba5a] transition-colors group cursor-pointer"
+        aria-label="Chat with Cultmoney support on WhatsApp"
+        className="flex items-center space-x-2 bg-[#075E54] text-white p-3.5 rounded-full shadow-premium hover:bg-[#054c43] transition-colors group cursor-pointer"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1, type: 'spring', stiffness: 260, damping: 20 }}

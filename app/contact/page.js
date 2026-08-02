@@ -593,9 +593,10 @@ export default function Contact() {
               href="https://wa.me/919160110888"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Chat with Cultmoney WhatsApp advisor"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-center py-4 px-8 rounded-full shadow-lg flex items-center space-x-3 tracking-wide transition-all w-full sm:w-auto justify-center"
+              className="bg-[#075E54] hover:bg-[#054c43] text-white font-bold text-center py-4 px-8 rounded-full shadow-lg flex items-center space-x-3 tracking-wide transition-all w-full sm:w-auto justify-center"
             >
               <MessageSquare className="w-4 h-4 shrink-0" />
               <span>WhatsApp Advisor</span>

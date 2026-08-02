@@ -145,9 +145,9 @@ export default function Home() {
             
             {/* Left Content */}
             <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
+              initial={{ x: -15 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.5 }}
               className="lg:col-span-6 space-y-8"
             >
               <div className="inline-flex items-center space-x-2 bg-slate-50 border border-slate-200/60 px-4 py-2 rounded-full">
@@ -185,9 +185,9 @@ export default function Home() {
 
             {/* Right Media Graphic */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.15 }}
+              initial={{ scale: 0.98 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
               className="lg:col-span-6 relative"
             >
               <div className="glass-panel p-3 rounded-4xl bg-white/80 overflow-hidden shadow-premium">

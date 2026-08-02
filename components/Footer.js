@@ -17,6 +17,7 @@ export default function Footer() {
                   src="/images/Wlogo.png"
                   alt="CultMoney Logo"
                   fill
+                  sizes="224px"
                   className="object-contain object-left"
                 />
               </div>

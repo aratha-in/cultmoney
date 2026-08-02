@@ -104,6 +104,7 @@ export default function Navbar() {
                 src="/images/logo.png"
                 alt="CultMoney Logo"
                 fill
+                sizes="224px"
                 className="object-contain object-left"
                 priority
               />

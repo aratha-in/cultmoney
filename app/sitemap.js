@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://cultmoney.com';
+  const baseUrl = 'https://www.cultmoney.in';
   
   const routes = [
     '',

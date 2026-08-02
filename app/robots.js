@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: [],
     },
-    sitemap: 'https://cultmoney.com/sitemap.xml',
+    sitemap: 'https://www.cultmoney.in/sitemap.xml',
   };
 }

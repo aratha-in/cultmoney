@@ -16,14 +16,14 @@ export const metadata = {
   title: 'Cultmoney - Premium Wealth Management & Investment Advisory',
   description: 'Cultmoney (Sahiani Finvest Pvt Ltd) is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
   keywords: 'Wealth Management, Investment Advisor, Mutual Funds, SIP, SWP, Portfolio Management, Cultmoney, Financial Planning, AMFI Registered Distributor, Sahiani Finvest',
-  metadataBase: new URL('https://cultmoney.com'),
+  metadataBase: new URL('https://www.cultmoney.in'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Cultmoney - Premium Wealth Management & Investment Advisory',
     description: 'Cultmoney (Sahiani Finvest Pvt Ltd) is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
-    url: 'https://cultmoney.com',
+    url: 'https://www.cultmoney.in',
     siteName: 'Cultmoney',
     images: [
       {

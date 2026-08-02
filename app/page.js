@@ -493,34 +493,34 @@ export default function Home() {
                 <thead>
                   <tr className="bg-slate-50 border-b border-slate-200">
                     <th className="p-5 text-sm font-bold text-slate-800">Advisory Feature</th>
-                    <th className="p-5 text-sm font-bold text-slate-500">Traditional/DIY Investing</th>
-                    <th className="p-5 text-sm font-bold text-primary">CultMoney Premium Advisory</th>
+                    <th className="p-5 text-sm font-bold text-slate-600">Traditional/DIY Investing</th>
+                    <th className="p-5 text-sm font-bold text-[#1B5E20]">CultMoney Premium Advisory</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-sm">
                   <tr>
                     <td className="p-5 font-semibold text-slate-800">Asset Allocation</td>
-                    <td className="p-5 text-slate-500">Generic or static models with no personalization.</td>
+                    <td className="p-5 text-slate-600">Generic or static models with no personalization.</td>
                     <td className="p-5 text-slate-700 font-medium">Bespoke dynamic models based on lifestyle goals.</td>
                   </tr>
                   <tr>
                     <td className="p-5 font-semibold text-slate-800">Transparency</td>
-                    <td className="p-5 text-slate-500">Hidden commissions, markups, and complex structures.</td>
+                    <td className="p-5 text-slate-600">Hidden commissions, markups, and complex structures.</td>
                     <td className="p-5 text-slate-700 font-medium">100% transparent client portals and commission disclosures.</td>
                   </tr>
                   <tr>
                     <td className="p-5 font-semibold text-slate-800">Advisory Support</td>
-                    <td className="p-5 text-slate-500">Customer care bots or generic call center support.</td>
+                    <td className="p-5 text-slate-600">Customer care bots or generic call center support.</td>
                     <td className="p-5 text-slate-700 font-medium">Dedicated expert advisor desks and live WhatsApp chat.</td>
                   </tr>
                   <tr>
                     <td className="p-5 font-semibold text-slate-800">Compliance & Trust</td>
-                    <td className="p-5 text-slate-500">Varies widely, often unverified third-party agents.</td>
+                    <td className="p-5 text-slate-600">Varies widely, often unverified third-party agents.</td>
                     <td className="p-5 text-slate-700 font-medium">AMFI-registered distributor (ARN-276771) with certified standards.</td>
                   </tr>
                   <tr>
                     <td className="p-5 font-semibold text-slate-800">Portfolio Reviews</td>
-                    <td className="p-5 text-slate-500">Self-driven or annual automated reports.</td>
+                    <td className="p-5 text-slate-600">Self-driven or annual automated reports.</td>
                     <td className="p-5 text-slate-700 font-medium">Continuous tracking and milestone-based reviews.</td>
                   </tr>
                 </tbody>

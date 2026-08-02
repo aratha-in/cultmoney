@@ -13,9 +13,35 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'CultMoney Finvest Pvt Ltd - Premium Wealth Management & Investment Advisory',
-  description: 'CultMoney is a premier wealth management and financial advisory firm offering customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
-  keywords: 'Wealth Management, Investment Advisor, Mutual Funds, SIP, SWP, Portfolio Management, CultMoney, Financial Planning, AMFI Registered Distributor',
+  title: 'Cultmoney - Premium Wealth Management & Investment Advisory',
+  description: 'Cultmoney (Sahiani Finvest Pvt Ltd) is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
+  keywords: 'Wealth Management, Investment Advisor, Mutual Funds, SIP, SWP, Portfolio Management, Cultmoney, Financial Planning, AMFI Registered Distributor, Sahiani Finvest',
+  metadataBase: new URL('https://cultmoney.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Cultmoney - Premium Wealth Management & Investment Advisory',
+    description: 'Cultmoney (Sahiani Finvest Pvt Ltd) is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
+    url: 'https://cultmoney.com',
+    siteName: 'Cultmoney',
+    images: [
+      {
+        url: '/images/financial_freedom.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cultmoney Financial Services',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cultmoney - Premium Wealth Management & Investment Advisory',
+    description: 'Cultmoney (Sahiani Finvest Pvt Ltd) is a premier wealth management and financial advisory firm.',
+    images: ['/images/financial_freedom.png'],
+  },
 };
 
 export default function RootLayout({ children }) {

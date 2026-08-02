@@ -214,7 +214,7 @@ export default function Home() {
                         <span className="text-xs font-bold text-slate-800">ARN-276771 Verified</span>
                       </div>
                     </div>
-                    <span className="text-[10px] bg-[#2E7D32]/10 text-[#2E7D32] font-bold px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] bg-[#1B5E20]/10 text-[#1B5E20] font-bold px-2.5 py-1 rounded-full">
                       100% Certified
                     </span>
                   </div>
@@ -248,11 +248,11 @@ export default function Home() {
 
             {/* Right Content */}
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Compounding Calculator</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Compounding Calculator</span>
               <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-950">
                 SIP Planner
               </h2>
-              <div className="inline-block bg-[#2E7D32]/10 text-[#2E7D32] font-bold text-xs px-3 py-1 rounded-full">
+              <div className="inline-block bg-[#1B5E20]/10 text-[#1B5E20] font-bold text-xs px-3 py-1 rounded-full">
                 Daily SIP
               </div>
               <p className="text-slate-500 text-sm leading-relaxed">
@@ -279,7 +279,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Service Packages</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Service Packages</span>
             <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-950">
               What We Offer:
             </h2>
@@ -304,7 +304,7 @@ export default function Home() {
                 <div className="pt-8">
                   <Link
                     href="/services/financial-services"
-                    className="inline-flex items-center space-x-2 text-xs font-bold text-[#2E7D32] hover:text-slate-900 transition-colors"
+                    className="inline-flex items-center space-x-2 text-xs font-bold text-[#1B5E20] hover:text-slate-900 transition-colors"
                   >
                     <span>Learn more <span className="sr-only">about our {offer.title} services</span></span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -322,7 +322,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Key Advantages</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Key Advantages</span>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-950">Why Choose Us</h2>
           </div>
 
@@ -350,7 +350,7 @@ export default function Home() {
       <section className="py-24 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Your Destination</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Your Destination</span>
             <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 mt-2">
               Financial Freedom
             </h2>
@@ -426,7 +426,7 @@ export default function Home() {
             {/* Right letter */}
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Founder & Leadership</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Founder & Leadership</span>
                 <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 leading-tight">Mahesh Mittapalli</h2>
                 <p className="text-sm md:text-base font-semibold text-secondary tracking-wide flex flex-wrap items-center gap-2">
                   <span>MBA, NISM, CWM</span>
@@ -463,7 +463,7 @@ export default function Home() {
       {/* 7. Company Mission Section */}
       <section className="py-24 relative z-10 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Our Core Mission</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Our Core Mission</span>
           <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 leading-tight">
             We bring innovation and creative Financial freedom to the CultMoney Financial Services
           </h2>
@@ -518,7 +518,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Testimonials</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Testimonials</span>
             <div className="flex items-center justify-center space-x-1.5">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
@@ -555,7 +555,7 @@ export default function Home() {
       {/* 10. Call to Action */}
       <section className="py-24 relative overflow-hidden z-10 bg-white border-t border-slate-200/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 bg-white border border-slate-200/60 p-12 rounded-4xl shadow-sm">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32]">Connect With Us</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Connect With Us</span>
           <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 max-w-2xl mx-auto">
             Ready to Begin Your Wealth Creation Journey?
           </h2>

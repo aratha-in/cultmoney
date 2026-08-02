@@ -21,9 +21,9 @@ export const metadata = {
     canonical: '/',
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    icon: '/CultMoneyicon.svg',
+    shortcut: '/CultMoneyicon.svg',
+    apple: '/CultMoneyicon.svg',
   },
   openGraph: {
     title: 'CultMoney - Premium Wealth Management',

@@ -227,7 +227,7 @@ export default function About() {
                   <div className="absolute bottom-6 left-6 right-6 text-white bg-slate-950/40 backdrop-blur-xs p-4 rounded-xl border border-white/10">
                     <p className="text-xs font-mono uppercase tracking-widest text-[#4CAF50] font-bold">Leadership Message</p>
                     <p className="text-sm italic font-medium leading-snug mt-1">
-                      "Empowering our clients with transparent, high-impact wealth advisory models."
+                      &quot;Empowering our clients with transparent, high-impact wealth advisory models.&quot;
                     </p>
                   </div>
                 </div>

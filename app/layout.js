@@ -13,16 +13,16 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Cultmoney - Premium Wealth Management & Investment Advisory',
-  description: 'Cultmoney (Sahiani Finvest Pvt Ltd) is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
+  title: 'CultMoney - Premium Wealth Management',
+  description: 'Cultmoney, operated by Sahiani Finvest Pvt Ltd, is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
   keywords: 'Wealth Management, Investment Advisor, Mutual Funds, SIP, SWP, Portfolio Management, Cultmoney, Financial Planning, AMFI Registered Distributor, Sahiani Finvest',
   metadataBase: new URL('https://www.cultmoney.in'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Cultmoney - Premium Wealth Management & Investment Advisory',
-    description: 'Cultmoney (Sahiani Finvest Pvt Ltd) is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
+    title: 'CultMoney - Premium Wealth Management',
+    description: 'Cultmoney, operated by Sahiani Finvest Pvt Ltd, is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
     url: 'https://www.cultmoney.in',
     siteName: 'Cultmoney',
     images: [
@@ -38,8 +38,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cultmoney - Premium Wealth Management & Investment Advisory',
-    description: 'Cultmoney (Sahiani Finvest Pvt Ltd) is a premier wealth management and financial advisory firm.',
+    title: 'CultMoney - Premium Wealth Management',
+    description: 'Cultmoney, operated by Sahiani Finvest Pvt Ltd, is a premier wealth management and financial advisory firm.',
     images: ['/images/financial_freedom.png'],
   },
 };

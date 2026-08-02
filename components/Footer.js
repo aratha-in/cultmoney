@@ -22,7 +22,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm leading-relaxed text-slate-300">
-              CultMoney Financial Services — We Build your Strong Financial Success. Empowering wealth creation through expert guidance.
+              Cult Money — We Build your Strong Financial Success. Empowering wealth creation through expert guidance.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-primary/20 hover:text-white flex items-center justify-center transition-colors duration-300">
@@ -115,18 +115,18 @@ export default function Footer() {
             <div className="flex items-start space-x-2 bg-white p-3 rounded-md shadow-sm">
               <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
               <p className="text-black">
-                <strong>AMFI registration details:</strong> CultMoney Financial Services is an AMFI registered Mutual Fund Distributor with ARN code <strong>ARN-276771</strong>. Initial Registration Date: 13/09/2023 | Validity: 31/10/2028.
+                <strong>AMFI registration details:</strong> Sahiani Finvest Pvt Ltd operating under the brand name Cultmoney is an AMFI registered Mutual Fund Distributor with ARN code <strong>ARN-276771</strong>. Initial Registration Date: 13/09/2023 | Validity: 31/10/2028.
               </p>
             </div>
           </div>
           <p className="leading-relaxed text-slate-400">
-            <strong>DISCLAIMER:</strong> Mutual Fund investments are subject to market risks, read all scheme related documents carefully. Past performance is not an indicator of future returns. CultMoney Financial Services does not guarantee any assured returns on investments. All calculator inputs and outputs are for illustrative projections and educational purposes only.
+            <strong>DISCLAIMER:</strong> Mutual Fund investments are subject to market risks, read all scheme related documents carefully. Past performance is not an indicator of future returns. Sahiani Finvest Pvt Ltd / Cultmoney does not guarantee any assured returns on investments. All calculator inputs and outputs are for illustrative projections and educational purposes only.
           </p>
         </div>
 
         {/* Bottom Credits */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} CultMoney Finvest Pvt Ltd. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Sahiani Finvest Pvt Ltd. All Rights Reserved.</p>
           <p className="flex items-center space-x-1">
             <span>Developed by <a href="https://aratha.in" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline font-semibold">Aratha</a></span>
           </p>

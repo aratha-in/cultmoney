@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Eye, Target, Users, Search, PenTool, Code, TrendingUp, Rocket, Award, Check, Shield, Calendar, CheckCircle } from 'lucide-react';
+import { Eye, Target, Users, Search, BarChart2, Layers, Briefcase, TrendingUp, Rocket, Award, Check, Shield, Calendar, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -145,19 +145,112 @@ export default function About() {
         </div>
       </section>
 
-      {/* 6‑D Process */}
+      {/* Leadership / Founder Section */}
+      <section className="py-24 bg-white border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">
+              Leadership
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold font-display text-slate-900 leading-tight">
+              Meet Our Founder
+            </h2>
+            <p className="text-slate-500 text-base md:text-lg">
+              Driving Sahiani Finvest and Cult Money with a passion for transparent, high-impact wealth creation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left side: Bio */}
+            <motion.div 
+              className="lg:col-span-7 space-y-6 order-2 lg:order-1"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="space-y-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900 font-display">Mahesh Mittapalli</h3>
+                <p className="text-sm md:text-base font-semibold text-secondary tracking-wide flex flex-wrap items-center gap-2">
+                  <span>MBA, NISM, CWM</span>
+                  <span className="text-slate-300">&bull;</span>
+                  <span>Founder, MD & CEO</span>
+                </p>
+              </div>
+
+              <div className="h-1 w-20 bg-brand-gradient rounded-full"></div>
+
+              <div className="space-y-4 text-slate-600 text-sm md:text-base leading-relaxed">
+                <p>
+                  <strong>Mahesh Mittapalli (MBA, NISM, CWM)</strong> is the Founder, MD & CEO of Cult Money. A seasoned financial leader with over two decades of experience across State Bank of India, HDFC Life, Prabhudas Lilladher, and Geojit Financial Services, Mahesh specializes in comprehensive wealth management, portfolio planning, mutual funds, insurance, and strategic business growth.
+                </p>
+                <p>
+                  Under his leadership, Sahiani Finvest / Cult Money is dedicated to delivering transparent, high-impact financial guidance that helps individuals and businesses achieve lasting financial growth and stability.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-100">
+                <div className="p-4 bg-slate-50 rounded-xl">
+                  <div className="text-2xl font-bold text-primary">20+ Yrs</div>
+                  <div className="text-xs text-slate-500 font-medium">Industry Expertise</div>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-xl">
+                  <div className="text-2xl font-bold text-[#06327B]">CWM</div>
+                  <div className="text-xs text-slate-500 font-medium">Chartered Wealth Mgr</div>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-xl">
+                  <div className="text-2xl font-bold text-primary">100%</div>
+                  <div className="text-xs text-slate-500 font-medium">Client Transparency</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right side: Image with nice background details */}
+            <motion.div 
+              className="lg:col-span-5 order-1 lg:order-2"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="glass-panel p-3 rounded-4xl bg-white shadow-lg relative group overflow-hidden max-w-md mx-auto">
+                <div className="relative h-[380px] md:h-[480px] w-full rounded-3xl overflow-hidden">
+                  <Image 
+                    src="/images/founder_portrait.jpeg"
+                    alt="Mahesh Mittapalli portrait"
+                    fill
+                    sizes="(max-w-768px) 100vw, 40vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6 text-white bg-slate-950/40 backdrop-blur-xs p-4 rounded-xl border border-white/10">
+                    <p className="text-xs font-mono uppercase tracking-widest text-[#4CAF50] font-bold">Leadership Message</p>
+                    <p className="text-sm italic font-medium leading-snug mt-1">
+                      "Empowering our clients with transparent, high-impact wealth advisory models."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Wealth Advisory Process */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">
-            Our 6‑D Process
+          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800 font-display">
+            Our Wealth Advisory Process
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {/* Left column steps */}
             <div className="space-y-12">
               {[
-                { icon: <Search className="w-8 h-8 text-primary" />, title: "Discover", desc: "We take the time to understand your financial goals, aspirations, and challenges. By discovering what’s important to you, we tailor our financial services and investment strategies to fit your unique requirements and long‑term objectives." },
-                { icon: <PenTool className="w-8 h-8 text-primary" />, title: "Design", desc: "Based on our discoveries, we design personalized financial strategies aligned with your goals. Whether it’s wealth management, retirement planning, investment planning, or tax optimization, we craft a financial roadmap that works effectively for you." },
-                { icon: <Code className="w-8 h-8 text-primary" />, title: "Develop", desc: "We develop a comprehensive financial roadmap to help you achieve your objectives. This includes detailed action plans, milestone tracking, investment recommendations, and financial growth strategies designed to maximize your future success." }
+                { icon: <Search className="w-8 h-8 text-primary" />, title: "Discovery & Profiling", desc: "We establish a personal advisory relationship, gathering detail on your current assets, risk tolerance, investment timeline, and core family aspirations to define your financial profile." },
+                { icon: <BarChart2 className="w-8 h-8 text-primary" />, title: "Analysis & Diagnostic", desc: "Our specialists perform a comprehensive audit of your current cash flows, tax structures, asset distribution, and coverage levels to identify efficiency gaps." },
+                { icon: <Layers className="w-8 h-8 text-primary" />, title: "Strategic Blueprinting", desc: "We design a customized wealth plan detailing target asset allocation model, tax-efficient structures, insurance safety nets, and retirement milestones." }
               ].map((step, i) => (
                 <motion.div key={i} className="relative pl-12" whileHover={{ scale: 1.02 }}>
                   <div className="absolute left-0 top-0 text-7xl font-extrabold text-primary opacity-10">{`0${i + 1}`}</div>
@@ -173,9 +266,9 @@ export default function About() {
             {/* Right column steps */}
             <div className="space-y-12">
               {[
-                { icon: <TrendingUp className="w-8 h-8 text-primary" />, title: "Drive", desc: "We continuously monitor your financial plan and make adjustments whenever necessary to ensure consistent progress. Our proactive financial approach helps clients stay on track and adapt confidently to changing market conditions and financial circumstances." },
-                { icon: <Rocket className="w-8 h-8 text-primary" />, title: "Deploy", desc: "Once your financial strategy is finalized, we deploy the required resources and implement the investment and financial solutions efficiently. Our team works closely with clients to ensure smooth execution and reliable support throughout the process." },
-                { icon: <Award className="w-8 h-8 text-primary" />, title: "Deliver", desc: "We are committed to delivering measurable financial results that truly matter. Our success is defined by client satisfaction, financial growth, wealth creation, and the successful achievement of long‑term financial goals." }
+                { icon: <Briefcase className="w-8 h-8 text-primary" />, title: "Portfolio Construction", desc: "We select high-performance investment products, mutual funds, and customized strategies aligned directly with your wealth blueprint to optimize risk-adjusted returns." },
+                { icon: <CheckCircle className="w-8 h-8 text-primary" />, title: "Seamless Execution", desc: "We execute all onboarding, fund transfers, and investment setups efficiently, ensuring automated allocations like SIPs or SWPs are properly configured." },
+                { icon: <TrendingUp className="w-8 h-8 text-primary" />, title: "Active Oversight & Rebalancing", desc: "We continuously track portfolio performance against benchmarks, performing tactical asset allocation rebalancing to stay aligned with your shifting goals." }
               ].map((step, i) => (
                 <motion.div key={i} className="relative pl-12" whileHover={{ scale: 1.02 }}>
                   <div className="absolute left-0 top-0 text-7xl font-extrabold text-primary opacity-10">{`0${i + 4}`}</div>

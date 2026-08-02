@@ -392,46 +392,65 @@ export default function Home() {
       </section>
 
       {/* 6. Founder Section */}
-      <section className="py-24 bg-white border-y border-slate-200/50 relative z-10">
+      <section className="py-24 bg-slate-50/30 border-y border-slate-200/50 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left portrait */}
             <div className="lg:col-span-5">
-              <div className="glass-panel p-3 rounded-4xl bg-white shadow-sm">
-                <div className="relative h-[350px] md:h-[450px] w-full rounded-3xl overflow-hidden">
+              <div className="glass-panel p-3 rounded-4xl bg-white shadow-sm relative group overflow-hidden">
+                <div className="relative h-[350px] md:h-[480px] w-full rounded-3xl overflow-hidden">
                   <Image 
-                    src="/images/founder_portrait.png"
-                    alt="CultMoney Managing Director"
+                    src="/images/founder_portrait.jpeg"
+                    alt="Mahesh Mittapalli - Founder, MD & CEO"
                     fill
                     sizes="(max-w-768px) 100vw, 40vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  {/* Overlay badge with experience */}
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-slate-100/50 flex items-center space-x-4">
+                    <div className="p-3 bg-primary/10 rounded-xl">
+                      <Award className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-slate-800">20+ Years</div>
+                      <div className="text-xs text-slate-500 font-medium">Financial Leadership</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Right letter */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-primary">Leadership Message</span>
-              <h2 className="text-3xl font-bold font-display text-slate-900">Personalized Financial Stewardship</h2>
+              <div className="space-y-2">
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">Founder & Leadership</span>
+                <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 leading-tight">Mahesh Mittapalli</h2>
+                <p className="text-sm md:text-base font-semibold text-secondary tracking-wide flex flex-wrap items-center gap-2">
+                  <span>MBA, NISM, CWM</span>
+                  <span className="hidden sm:inline text-slate-300">&bull;</span>
+                  <span>Founder, MD & CEO</span>
+                </p>
+              </div>
               <div className="h-1 w-20 bg-brand-gradient rounded-full"></div>
               
-              <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
+              <div className="space-y-4 text-slate-600 text-sm md:text-base leading-relaxed">
                 <p>
-                  At CultMoney Financial Services, we are committed to helping our clients achieve their financial goals through personalized financial planning, investment management, and expert advisory services.
+                  <strong>Mahesh Mittapalli (MBA, NISM, CWM)</strong> is the Founder, MD & CEO of Cult Money. A seasoned financial leader with over two decades of experience across State Bank of India, HDFC Life, Prabhudas Lilladher, and Geojit Financial Services, Mahesh specializes in comprehensive wealth management, portfolio planning, mutual funds, insurance, and strategic business growth.
                 </p>
                 <p>
-                  Our experienced team is dedicated to providing trusted financial solutions and long-term wealth creation strategies for individuals and businesses.
-                </p>
-                <p>
-                  Let us be your trusted partner on the path to financial freedom.
+                  Under his leadership, Sahiani Finvest / Cult Money is dedicated to delivering transparent, high-impact financial guidance that helps individuals and businesses achieve lasting financial growth and stability.
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-200">
-                <span className="font-bold text-slate-800 block text-base font-display">Managing Director</span>
-                <span className="text-xs text-primary font-semibold uppercase tracking-wider">CultMoney Financial Services</span>
+              <div className="pt-4 border-t border-slate-200 flex flex-wrap gap-4 items-center justify-between">
+                <div>
+                  <span className="font-bold text-slate-800 block text-base font-display">Mahesh Mittapalli</span>
+                  <span className="text-xs text-slate-500 font-medium">Founder, MD & CEO</span>
+                </div>
+                <span className="text-xs bg-secondary/10 text-secondary px-3 py-1.5 rounded-full font-bold uppercase tracking-wider">
+                  Cult Money
+                </span>
               </div>
             </div>
 

@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Client Portfolio Login | Cultmoney Wealth Portal',
-  description: 'Access your secure wealth management portfolio dashboard on Cultmoney. Track your mutual funds, SIP plans, and assets growth live.',
-  keywords: 'Cultmoney login, client login, investment dashboard, wealth dashboard, track portfolio online',
+  title: 'Client Portfolio Login | CultMoney Wealth Portal',
+  description: 'Access your secure wealth management portfolio dashboard on CultMoney. Track your mutual funds, SIP plans, and assets growth live.',
+  keywords: 'CultMoney login, client login, investment dashboard, wealth dashboard, track portfolio online, secure wealth portal',
   alternates: {
     canonical: '/portfolio-login',
   },

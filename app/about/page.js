@@ -59,6 +59,7 @@ export default function About() {
               </p>
             </div>
 
+
             <div className="flex flex-wrap gap-5 pt-4">
               <button className="px-8 py-4 rounded-2xl bg-gradient-to-r from-[#4CAF50] to-[#06327B] text-white font-bold shadow-xl hover:scale-105 transition-all duration-300">
                 Get Started

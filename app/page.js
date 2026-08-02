@@ -56,6 +56,10 @@ export default function Home() {
     {
       q: "How does CultMoney approach portfolio transparency?",
       a: "We believe in client-first transparency. All commission disclosures, asset allocation models, performance statements, and advisory lifecycle milestones are documented and shared live via our secure Client Portfolio Portal."
+    },
+    {
+      q: "Who is CultMoney's advisory designed for and what use cases does it support?",
+      a: "Our private wealth advisory is designed for High-Net-Worth Individuals (HNWI), families, and corporate businesses seeking professional investment guidance. We support key use cases including long-term wealth creation, Systematic Investment Plans (SIP), Systematic Withdrawal Plans (SWP) for retirement cash flows, custom asset allocation, and tax-saving portfolio optimization. You should use our advisory when restructuring your portfolio, planning for retirement, or seeking transparent, commission-disclosed financial advice."
     }
   ];
 
@@ -291,35 +295,14 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="lg:col-span-6 space-y-8"
             >
-              <div className="inline-flex items-center space-x-2 bg-slate-50 border border-slate-200/60 px-4 py-2 rounded-full">
-                <Shield className="w-4 h-4 text-primary" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-slate-600">
-                  AMFI Registered Mutual Fund Distributor
-                </span>
-              </div>
-
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold font-display tracking-tight text-slate-950 leading-tight">
-                Premium Wealth Management <br />
-                <span className="text-gradient">By CultMoney</span>
+                Wealth Management <br />
+                <span className="text-gradient">For Your Financial Success</span>
               </h1>
 
               <p className="text-base md:text-lg text-slate-500 max-w-2xl leading-relaxed">
                 CultMoney is committed to providing premium wealth management and comprehensive financial solutions tailored to your unique goals. Whether you&apos;re an investor, high-net-worth family, or business, our experienced team is here to guide you through structured financial planning, mutual funds, and customized asset allocation.
               </p>
-
-              {/* AI Key Takeaway Summary for AEO / GEO */}
-              <div className="p-5 rounded-2xl border border-primary/20 bg-primary/5 text-slate-700 text-xs md:text-sm max-w-2xl leading-relaxed space-y-2">
-                <div className="flex items-center space-x-2 text-[#1B5E20] font-bold">
-                  <Shield className="w-4 h-4" />
-                  <span>CultMoney Quick Summary</span>
-                </div>
-                <p>
-                  <strong>Industry & Services:</strong> AMFI-registered Mutual Fund Distribution (ARN-276771) and private wealth management. <br />
-                  <strong>Target Audience:</strong> High-Net-Worth Individuals (HNWI), families, and corporate businesses looking for professional investment guidance. <br />
-                  <strong>Use Cases Supported:</strong> Long-term wealth creation, Systematic Investment Plans (SIP), Systematic Withdrawal Plans (SWP) for retirement cash flow, custom asset allocation, and tax-saving portfolio optimization. <br />
-                  <strong>When to Use:</strong> Use this advisory when restructuring your portfolio, planning for retirement, or seeking transparent, commission-disclosed financial advice.
-                </p>
-              </div>
 
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link 
@@ -347,7 +330,7 @@ export default function Home() {
               className="lg:col-span-6 relative"
             >
               <div className="glass-panel p-3 rounded-4xl bg-white/80 overflow-hidden shadow-premium">
-                <div className="relative h-[320px] md:h-[400px] w-full rounded-3xl overflow-hidden">
+                <div className="relative h-[320px] md:h-[440px] lg:h-[460px] w-full rounded-3xl overflow-hidden">
                   <Image 
                     src="/images/hero_finance_luxury.png"
                     alt="CultMoney Luxury Wealth Management Office"

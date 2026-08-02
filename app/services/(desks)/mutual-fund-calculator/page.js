@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   AreaChart,
   Area,
@@ -367,9 +368,12 @@ export default function MutualFundCalculator() {
             >
               {/* Glass container wrapping high-end Unsplash image */}
               <div className="relative p-3 bg-white border border-slate-200/60 rounded-3xl shadow-xl backdrop-blur-xl w-full max-w-lg aspect-[4/3] overflow-hidden group">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
                   alt="Wealth management and premium investment planning dashboard" 
+                  fill
+                  sizes="(max-w-768px) 100vw, 50vw"
+                  priority
                   className="rounded-2xl object-cover w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-700"
                 />
                 

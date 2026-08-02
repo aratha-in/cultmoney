@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { 
   MapPin, 
   Phone, 
@@ -110,9 +111,12 @@ export default function Contact() {
       <section className="relative py-20 md:py-28 overflow-hidden z-10 flex items-center justify-center bg-white border-b border-slate-100">
         {/* Background Image with elegant light overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80" 
             alt="CultMoney Luxury Wealth Management Office"
+            fill
+            sizes="100vw"
+            priority
             className="w-full h-full object-cover opacity-[0.07]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-[#F8FAF8]/98 to-white backdrop-blur-[1px]"></div>

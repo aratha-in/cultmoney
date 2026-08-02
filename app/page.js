@@ -63,6 +63,34 @@ export default function Home() {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebPage",
+        "@id": "https://www.cultmoney.in/#webpage",
+        "url": "https://www.cultmoney.in",
+        "name": "CultMoney - Premium Wealth Management",
+        "description": "Secure your future with CultMoney. Operated by Sahiani Finvest Pvt Ltd, we offer premium wealth management, mutual funds, and custom investment plans.",
+        "publisher": {
+          "@id": "https://www.cultmoney.in/#organization"
+        },
+        "about": {
+          "@id": "https://www.cultmoney.in/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.cultmoney.in/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.cultmoney.in/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.cultmoney.in"
+          }
+        ]
+      },
+      {
         "@type": "Organization",
         "@id": "https://www.cultmoney.in/#organization",
         "name": "CultMoney",
@@ -106,6 +134,30 @@ export default function Home() {
           "Portfolio Management Services"
         ],
         "areaServed": "IN"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://www.cultmoney.in/#article",
+        "isPartOf": {
+          "@id": "https://www.cultmoney.in/#webpage"
+        },
+        "headline": "CultMoney - Premium Wealth Management",
+        "description": "Secure your future with CultMoney. Operated by Sahiani Finvest Pvt Ltd, we offer premium wealth management, mutual funds, and custom investment plans.",
+        "image": "https://www.cultmoney.in/images/financial_freedom.png",
+        "datePublished": "2023-09-13T08:00:00+05:30",
+        "dateModified": "2026-08-03T01:25:00+05:30",
+        "publisher": {
+          "@id": "https://www.cultmoney.in/#organization"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Mahesh Mittapalli",
+          "jobTitle": "Founder, MD & CEO",
+          "worksFor": {
+            "@id": "https://www.cultmoney.in/#organization"
+          }
+        },
+        "mainEntityOfPage": "https://www.cultmoney.in"
       },
       {
         "@type": "FAQPage",
@@ -248,7 +300,7 @@ export default function Home() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold font-display tracking-tight text-slate-950 leading-tight">
                 Premium Wealth Management <br />
-                <span className="text-gradient">For Your Financial Success</span>
+                <span className="text-gradient">By CultMoney</span>
               </h1>
 
               <p className="text-base md:text-lg text-slate-500 max-w-2xl leading-relaxed">
@@ -262,9 +314,10 @@ export default function Home() {
                   <span>CultMoney Quick Summary</span>
                 </div>
                 <p>
-                  <strong>Who we are:</strong> CultMoney (Sahiani Finvest Pvt Ltd) is an AMFI-registered Mutual Fund Distributor (ARN-276771) providing expert wealth management. <br />
-                  <strong>What we offer:</strong> Customized investment plans, SIP, SWP, and HNWI portfolio advisory. <br />
-                  <strong>Who it is for:</strong> Individual investors, HNW families, and businesses seeking transparent, long-term asset allocation and financial growth.
+                  <strong>Industry & Services:</strong> AMFI-registered Mutual Fund Distribution (ARN-276771) and private wealth management. <br />
+                  <strong>Target Audience:</strong> High-Net-Worth Individuals (HNWI), families, and corporate businesses looking for professional investment guidance. <br />
+                  <strong>Use Cases Supported:</strong> Long-term wealth creation, Systematic Investment Plans (SIP), Systematic Withdrawal Plans (SWP) for retirement cash flow, custom asset allocation, and tax-saving portfolio optimization. <br />
+                  <strong>When to Use:</strong> Use this advisory when restructuring your portfolio, planning for retirement, or seeking transparent, commission-disclosed financial advice.
                 </p>
               </div>
 

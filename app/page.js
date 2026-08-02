@@ -247,13 +247,26 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold font-display tracking-tight text-slate-950 leading-tight">
-                We Build your Strong <br />
-                <span className="text-gradient">Financial Success</span>
+                Premium Wealth Management <br />
+                <span className="text-gradient">For Your Financial Success</span>
               </h1>
 
               <p className="text-base md:text-lg text-slate-500 max-w-2xl leading-relaxed">
-                CultMoney Financial Services is committed to providing comprehensive financial solutions that are tailored to meet your unique needs and goals. Whether you&apos;re an individual, family, or business, our experienced team is here to guide you through the complexities of financial planning, taxation, investment management, and more.
+                CultMoney is committed to providing premium wealth management and comprehensive financial solutions tailored to your unique goals. Whether you&apos;re an investor, high-net-worth family, or business, our experienced team is here to guide you through structured financial planning, mutual funds, and customized asset allocation.
               </p>
+
+              {/* AI Key Takeaway Summary for AEO / GEO */}
+              <div className="p-5 rounded-2xl border border-primary/20 bg-primary/5 text-slate-700 text-xs md:text-sm max-w-2xl leading-relaxed space-y-2">
+                <div className="flex items-center space-x-2 text-[#1B5E20] font-bold">
+                  <Shield className="w-4 h-4" />
+                  <span>CultMoney Quick Summary</span>
+                </div>
+                <p>
+                  <strong>Who we are:</strong> CultMoney (Sahiani Finvest Pvt Ltd) is an AMFI-registered Mutual Fund Distributor (ARN-276771) providing expert wealth management. <br />
+                  <strong>What we offer:</strong> Customized investment plans, SIP, SWP, and HNWI portfolio advisory. <br />
+                  <strong>Who it is for:</strong> Individual investors, HNW families, and businesses seeking transparent, long-term asset allocation and financial growth.
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link 
@@ -432,6 +445,62 @@ export default function Home() {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* 4.5 Service Comparison for SEO / AEO / GEO */}
+      <section className="py-24 relative z-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#1B5E20]">Advisory Comparison</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900">
+              CultMoney vs Traditional Investing
+            </h2>
+            <p className="text-slate-500 text-sm leading-relaxed">
+              Discover how our premium wealth advisory services compare to self-directed or generic retail investing options.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto overflow-hidden rounded-3xl border border-slate-200/60 shadow-sm bg-white">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-200">
+                    <th className="p-5 text-sm font-bold text-slate-800">Advisory Feature</th>
+                    <th className="p-5 text-sm font-bold text-slate-500">Traditional/DIY Investing</th>
+                    <th className="p-5 text-sm font-bold text-primary">CultMoney Premium Advisory</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-sm">
+                  <tr>
+                    <td className="p-5 font-semibold text-slate-800">Asset Allocation</td>
+                    <td className="p-5 text-slate-500">Generic or static models with no personalization.</td>
+                    <td className="p-5 text-slate-700 font-medium">Bespoke dynamic models based on lifestyle goals.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-5 font-semibold text-slate-800">Transparency</td>
+                    <td className="p-5 text-slate-500">Hidden commissions, markups, and complex structures.</td>
+                    <td className="p-5 text-slate-700 font-medium">100% transparent client portals and commission disclosures.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-5 font-semibold text-slate-800">Advisory Support</td>
+                    <td className="p-5 text-slate-500">Customer care bots or generic call center support.</td>
+                    <td className="p-5 text-slate-700 font-medium">Dedicated expert advisor desks and live WhatsApp chat.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-5 font-semibold text-slate-800">Compliance & Trust</td>
+                    <td className="p-5 text-slate-500">Varies widely, often unverified third-party agents.</td>
+                    <td className="p-5 text-slate-700 font-medium">AMFI-registered distributor (ARN-276771) with certified standards.</td>
+                  </tr>
+                  <tr>
+                    <td className="p-5 font-semibold text-slate-800">Portfolio Reviews</td>
+                    <td className="p-5 text-slate-500">Self-driven or annual automated reports.</td>
+                    <td className="p-5 text-slate-700 font-medium">Continuous tracking and milestone-based reviews.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 

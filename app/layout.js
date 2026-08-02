@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: 'CultMoney - Premium Wealth Management',
-  description: 'Cultmoney, operated by Sahiani Finvest Pvt Ltd, is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
+  description: 'Secure your future with CultMoney. Operated by Sahiani Finvest Pvt Ltd, we offer premium wealth management, mutual funds, and custom investment plans.',
   keywords: 'Wealth Management, CultMoney, Investment Advisor, Best Wealth Management India, Top Financial Advisors Hyderabad, Mutual Funds Distributor, SIP Investment, SWP Planning, Portfolio Management Services, Financial Planning India, AMFI Registered Distributor, Sahiani Finvest, Wealth Advisors Hyderabad, Private Wealth Management, High Net Worth Individual (HNWI) Wealth Services, Bespoke Investment Advisory, Asset Allocation, Retirement Planning India, Tax Saving Investments',
   metadataBase: new URL('https://www.cultmoney.in'),
   alternates: {
@@ -27,7 +27,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'CultMoney - Premium Wealth Management',
-    description: 'Cultmoney, operated by Sahiani Finvest Pvt Ltd, is a premier wealth management and financial advisory firm. We offer customized investment plans, mutual funds, SIP, SWP, and high-net-worth portfolio solutions.',
+    description: 'Secure your future with CultMoney. Operated by Sahiani Finvest Pvt Ltd, we offer premium wealth management, mutual funds, and custom investment plans.',
     url: 'https://www.cultmoney.in',
     siteName: 'Cultmoney',
     images: [
@@ -44,7 +44,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'CultMoney - Premium Wealth Management',
-    description: 'Cultmoney, operated by Sahiani Finvest Pvt Ltd, is a premier wealth management and financial advisory firm.',
+    description: 'Secure your future with CultMoney. Operated by Sahiani Finvest Pvt Ltd, we offer premium wealth management, mutual funds, and custom investment plans.',
     images: ['/images/financial_freedom.png'],
   },
 };

@@ -14,11 +14,11 @@ export default function Footer() {
             <Link href="/" className="flex items-center group">
               <div className="w-56 h-14 overflow-hidden rounded-lg flex-shrink-0">
                 <Image
-                  src="/Cultmoney_logo.svg"
+                  src="/CultMoney LogoWhite.svg"
                   alt="CultMoney Logo"
                   width={224}
                   height={56}
-                  className="object-contain object-left brightness-0 invert"
+                  className="object-contain object-left"
                 />
               </div>
             </Link>

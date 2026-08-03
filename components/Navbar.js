@@ -108,7 +108,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center group">
             <div className="w-56 h-14 overflow-hidden group-hover:scale-105 transition-transform duration-300">
               <Image
-                src="/Cultmoney_logo.svg"
+                src="/images/CultMoney.png"
                 alt="CultMoney Logo"
                 width={224}
                 height={56}

@@ -96,7 +96,7 @@ export default function Navbar() {
   ];
 
   const otherLinks = [
-    { name: 'Quick Links', path: '/quick-links' },
+    { name: 'PORTFOLIO LOGIN', path: 'https://sahianifin.investwell.app/app/#/login' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -200,23 +200,41 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            {otherLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                className={`text-sm font-medium transition-all duration-300 relative py-1 ${
-                  pathname === link.path ? 'text-primary font-semibold' : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                {link.name}
-                {pathname === link.path && (
-                  <motion.span
-                    layoutId="activeNavIndicator"
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary rounded-full"
-                  />
-                )}
-              </Link>
-            ))}
+            {otherLinks.map((link) => {
+              const isExternal = link.path.startsWith('http');
+
+              if (isExternal) {
+                return (
+                  <a
+                    key={link.path}
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium transition-all duration-300 relative py-1 text-slate-600 hover:text-slate-900"
+                  >
+                    {link.name}
+                  </a>
+                );
+              }
+
+              return (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className={`text-sm font-medium transition-all duration-300 relative py-1 ${
+                    pathname === link.path ? 'text-primary font-semibold' : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  {link.name}
+                  {pathname === link.path && (
+                    <motion.span
+                      layoutId="activeNavIndicator"
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary rounded-full"
+                    />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
 
@@ -275,17 +293,35 @@ export default function Navbar() {
               </div>
 
               <div className="border-t border-slate-100 my-2 pt-2">
-                {otherLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    href={link.path}
-                    className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
-                      pathname === link.path ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-600 hover:bg-slate-50'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                {otherLinks.map((link) => {
+                  const isExternal = link.path.startsWith('http');
+
+                  if (isExternal) {
+                    return (
+                      <a
+                        key={link.path}
+                        href={link.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-3 rounded-xl text-base font-medium transition-all text-slate-600 hover:bg-slate-50"
+                      >
+                        {link.name}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={link.path}
+                      href={link.path}
+                      className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
+                        pathname === link.path ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-600 hover:bg-slate-50'
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                })}
               </div>
 
               <div className="pt-4 px-4">
